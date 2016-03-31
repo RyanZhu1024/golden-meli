@@ -6,30 +6,6 @@ export default(props) => {
             <div className="chip">
                 Java
             </div>
-            <div className="chip">
-                Java
-            </div>
-            <div className="chip">
-                Java
-            </div>
-            <div className="chip">
-                Java
-            </div>
-            <div className="chip">
-                Java
-            </div>
-            <div className="chip">
-                Java
-            </div>
-            <div className="chip">
-                Java
-            </div>
-            <div className="chip">
-                Java
-            </div>
-            <div className="chip">
-                Java
-            </div>
         </div>
     )
 }
