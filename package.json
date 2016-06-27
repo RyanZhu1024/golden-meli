@@ -1,0 +1,26 @@
+{
+  "name": "golden-meli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RyanZhu1024/golden-meli.git"
+  },
+  "author": "Ryan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RyanZhu1024/golden-meli/issues"
+  },
+  "homepage": "https://github.com/RyanZhu1024/golden-meli#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^2.21.0",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
