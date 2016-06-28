@@ -7,28 +7,26 @@ const PATHS = {
     build: path.join(__dirname, 'build')
 }
 
-const devServer = {
-    devServer: {
-        historyApiFallback: true,
-        hot: true,
-        inline: true,
-        stats: 'error-only',
-        host: '0.0.0.0',
-        port: '3000'
-    },
-    plugins: [
-        new webpack.HotModuleReplacementPlugin({
-            multiStep: true
-        })
-    ]
-}
+// const devServer = {
+//     devServer: {
+//         historyApiFallback: true,
+//         hot: true,
+//         inline: true,
+//         stats: 'error-only',
+//         host: '0.0.0.0',
+//         port: '3000'
+//     },
+//     plugins: [
+//         new webpack.HotModuleReplacementPlugin({
+//             multiStep: true
+//         })
+//     ]
+// }
 module.exports = {
-    entry: {
-        app: PATHS.app
-    },
+    entry: ['./app/index.js'],
     output: {
         path: PATHS.build,
-        filename: '[name].js'
+        filename: 'app.js'
     },
     plugins:[
         new HtmlWebpackPlugin({
@@ -38,6 +36,22 @@ module.exports = {
             multiStep: true
         })
     ],
+    module: {
+        loaders: [
+            {
+                test: /\.js$/,
+                include: path.join(__dirname, 'app'),
+                exclude: /(node_modules)/,
+                loader: 'babel',
+                query: {
+                    presets: ['es2015','react']
+                }
+            }
+        ]
+    },
+    // resolve: {
+    //     extensions: ['','.js','.jsx']
+    // },
     devServer: {
         historyApiFallback: true,
         hot: true,
