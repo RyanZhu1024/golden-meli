@@ -1,10 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import Navigator from './components/navigator';
+
 const App = () => {
     return (
-        <div>Hello World</div>
+        <div>
+            <Navigator />
+        </div>
     );
 }
 
-ReactDOM.render(<App />, document.querySelector('body'));
+ReactDOM.render(<App />, document.querySelector('.container'));
